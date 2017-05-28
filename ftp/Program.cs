@@ -9,21 +9,17 @@ namespace SharpFtpServer
 {
     class Program
     {
+        //void Program.Main(string[] args)
+        //Основная функция программы
       static void Main(string[] args)
         {
-        SharpFtpServer.FtpServer s = new SharpFtpServer.FtpServer();
-           
-                s.Start();
-                Console.WriteLine("Press any key to stop...");
-                Console.ReadKey(true);
+            FtpServer s = new FtpServer();
+            s.Start();//запуск сервера
+            Console.WriteLine("Press any key to stop...");
+            Console.ReadKey(true);
+            s.Stop();//остановка сервера
             return;
         }
-
-     /* static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
-          {
-              _log.Fatal((Exception)e.ExceptionObject);
-          }
-      */
     }
 }
 
